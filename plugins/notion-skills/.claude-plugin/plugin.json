@@ -1,0 +1,21 @@
+{
+  "name": "notion-skills",
+  "description": "Comprehensive collection of Claude skills for Notion integration: capture knowledge from conversations, prepare for meetings, conduct research, and convert specifications into implementation plans",
+  "version": "1.0.0",
+  "author": {
+    "name": "Anthropic & Notion",
+    "email": "contact@notion.so",
+    "url": "https://notion.so"
+  },
+  "license": "MIT",
+  "keywords": [
+    "notion",
+    "productivity",
+    "knowledge-management",
+    "meeting-prep",
+    "research-documentation",
+    "implementation-planning"
+  ],
+  "repository": "https://github.com/tommy-ca/notion-skills",
+  "homepage": "https://github.com/tommy-ca/notion-skills"
+}
