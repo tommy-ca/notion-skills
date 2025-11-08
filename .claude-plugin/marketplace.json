@@ -1,0 +1,43 @@
+{
+  "name": "notion-skills-marketplace",
+  "description": "Marketplace for Claude skills enabling productive Notion workflows. Includes knowledge capture, meeting intelligence, research documentation, and specification-to-implementation planning.",
+  "version": "1.0.0",
+  "owner": {
+    "name": "Anthropic & Notion",
+    "url": "https://notion.so",
+    "email": "contact@notion.so"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/tommy-ca/notion-skills",
+  "homepage": "https://github.com/tommy-ca/notion-skills",
+  "plugins": [
+    {
+      "name": "notion-skills",
+      "description": "Comprehensive collection of Claude skills for Notion integration: capture knowledge from conversations, prepare for meetings, conduct research, and convert specifications into implementation plans",
+      "version": "1.0.0",
+      "author": {
+        "name": "Anthropic & Notion",
+        "email": "contact@notion.so",
+        "url": "https://notion.so"
+      },
+      "license": "MIT",
+      "keywords": [
+        "notion",
+        "productivity",
+        "knowledge-management",
+        "meeting-prep",
+        "research-documentation",
+        "implementation-planning"
+      ],
+      "repository": "https://github.com/tommy-ca/notion-skills",
+      "homepage": "https://github.com/tommy-ca/notion-skills",
+      "source": "./plugins/notion-skills",
+      "skills": [
+        "knowledge-capture",
+        "meeting-intelligence",
+        "research-documentation",
+        "spec-to-implementation"
+      ]
+    }
+  ]
+}
