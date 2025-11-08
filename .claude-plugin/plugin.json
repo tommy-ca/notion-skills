@@ -1,0 +1,10 @@
+{
+  "name": "Notion Skills",
+  "description": "Collection of Claude skills for productive Notion workflows including knowledge capture, meeting intelligence, research documentation, and specification-to-implementation planning",
+  "version": "1.0.0",
+  "author": "Anthropic & Notion",
+  "license": "MIT",
+  "keywords": ["notion", "productivity", "documentation", "knowledge-management", "meeting-prep", "research", "implementation"],
+  "repository": "https://github.com/yourusername/notion-skills",
+  "homepage": "https://github.com/yourusername/notion-skills"
+}
