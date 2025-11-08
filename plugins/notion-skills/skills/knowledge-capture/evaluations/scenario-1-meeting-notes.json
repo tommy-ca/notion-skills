@@ -1,0 +1,99 @@
+{
+  "id": "scenario-1-meeting-notes",
+  "name": "Meeting Notes Capture",
+  "description": "Convert unstructured meeting notes into a structured meeting summary",
+  "complexity": "medium",
+  "input_type": "meeting_notes",
+  "output_type": "meeting_summary",
+  "input": {
+    "context": "Team planning meeting about Q4 roadmap",
+    "content": "Had a meeting today with product, engineering, and design about Q4 priorities. We talked about the fact that customers have been asking for dark mode for a while - it's our most requested feature. Sarah (PM) said we should prioritize it, and Mike (design) showed mockups that look great. The engineering team (me, Alex, and Jordan) think we can get it done in 2 sprints if we focus. We also talked about the mobile app - James mentioned that iOS performance is slow when rendering large lists. We didn't decide on a timeline for that yet. Alex volunteered to look into virtualization. For dark mode, we decided to ship it with a toggle in settings that persists to the database. Next steps: Sarah will write the spec this week, Mike will finalize designs by end of week, and our team will start on implementation next sprint. We also have some tech debt from the old auth system that Mike thinks is slowing us down, but we deferred that to next quarter. Finally, we need a QA plan for dark mode - Jessica said she'd put together a testing plan."
+  },
+  "expected_output": {
+    "document_type": "meeting_summary",
+    "structure": {
+      "title": "Q4 Roadmap Planning - Team Meeting",
+      "sections": [
+        "Meeting Details",
+        "Key Decisions",
+        "Action Items",
+        "Topics Discussed",
+        "Deferred Items"
+      ]
+    },
+    "key_decisions": [
+      {
+        "decision": "Prioritize dark mode implementation",
+        "rationale": "Most frequently requested customer feature"
+      },
+      {
+        "decision": "Dark mode will use toggle in settings with database persistence",
+        "rationale": "User preference persistence requirement"
+      }
+    ],
+    "action_items": [
+      {
+        "owner": "Sarah",
+        "task": "Write dark mode specification",
+        "deadline": "This week"
+      },
+      {
+        "owner": "Mike",
+        "task": "Finalize dark mode design mockups",
+        "deadline": "End of week"
+      },
+      {
+        "owner": "Engineering team",
+        "task": "Begin dark mode implementation",
+        "deadline": "Next sprint"
+      },
+      {
+        "owner": "Alex",
+        "task": "Investigate list virtualization for iOS performance",
+        "deadline": "TBD"
+      },
+      {
+        "owner": "Jessica",
+        "task": "Create QA test plan for dark mode",
+        "deadline": "TBD"
+      }
+    ],
+    "attendees": [
+      "Sarah (Product)",
+      "Mike (Design)",
+      "Engineering: self, Alex, Jordan",
+      "James (mentioned iOS issues)",
+      "Jessica (QA)"
+    ]
+  },
+  "success_criteria": {
+    "must_capture": [
+      "Meeting purpose and date",
+      "All participants/roles",
+      "Both major decisions with rationale",
+      "All 5 action items with owners and deadlines",
+      "Topics discussed (dark mode, mobile performance, tech debt)",
+      "Implementation timeline (2 sprints for dark mode)"
+    ],
+    "should_capture": [
+      "Design mockups mentioned",
+      "Tech debt deferred to Q1",
+      "Connection to customer requests"
+    ],
+    "must_not_do": [
+      "Invent action items not mentioned",
+      "Misassign ownership",
+      "Lose deadline information",
+      "Create orphaned document without linking context"
+    ]
+  },
+  "evaluation_notes": {
+    "difficulty": "Medium - requires extracting structure from unstructured narrative",
+    "key_challenge": "Identifying implicit decisions and action items from conversation flow",
+    "model_variations": {
+      "haiku": "May miss some implicit items, but should catch main points",
+      "sonnet": "Should capture all explicit items and most implicit ones",
+      "opus": "Should capture full context with implicit relationships"
+    }
+  }
+}
